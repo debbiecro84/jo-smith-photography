@@ -1,0 +1,17 @@
+{
+  "name": "josmith_donttouch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --config bs-config.js",
+    "optimize-images": "imagemin images/* --out-dir=images/optimized"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "imagemin-cli": "^8.0.0"
+  },
+  "description": ""
+}

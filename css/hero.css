@@ -1,0 +1,208 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-item .hero-content {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.carousel-item .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(2px);
+}
+
+.carousel-item .container {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding-top: 35vh;
+    max-width: 900px;
+}
+
+.carousel-indicators {
+    margin-bottom: 3rem;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.hero-section .display-4 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-section .lead {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: var(--highlight-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.2s;
+}
+
+.hero-section .btn-light {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.4s;
+}
+
+.hero-section .btn-light:hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-section .display-4 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section .display-4 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+    
+    .hero-section .btn-light {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .carousel-item .container {
+        padding-top: 30vh;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section .display-4 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .carousel-item .container {
+        padding-top: 25vh;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 20%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.6rem;
+    }
+} 
