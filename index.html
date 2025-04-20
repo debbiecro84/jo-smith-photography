@@ -3,258 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jo Smith Photography - Professional Photographer</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional photography services by Jo Smith. Specializing in portrait, wedding, and event photography. Based in Scotland.">
-    <meta name="keywords" content="photography, photographer, portrait photography, wedding photography, event photography, Scotland photographer">
-    <meta name="author" content="Jo Smith Photography">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.josmithphotography.com/">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Jo Smith Photography - Professional Photographer">
-    <meta property="og:description" content="Professional photography services by Jo Smith. Specializing in portrait, wedding, and event photography. Based in Scotland.">
-    <meta property="og:image" content="https://www.josmithphotography.com/images/og-image.jpg">
-    <meta property="og:url" content="https://www.josmithphotography.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jo Smith Photography - Professional Photographer">
-    <meta name="twitter:description" content="Professional photography services by Jo Smith. Specializing in portrait, wedding, and event photography. Based in Scotland.">
-    <meta name="twitter:image" content="https://www.josmithphotography.com/images/twitter-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
-    <!-- Preconnect to important domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <title>Welcome to Jo Smith Photography</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1476535882942-632ab96c48aa?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+            background-size: cover;
+            opacity: 0.4;
+            z-index: 1;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 0.4; }
+        }
+
+        .content {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            position: relative;
+            animation: slideUp 1.5s ease-out;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: #fff;
+            animation: lineGrow 1.5s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes lineGrow {
+            from { width: 0; }
+            to { width: 100px; }
+        }
+
+        .enter-btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #fff;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+            background: transparent;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            opacity: 0;
+            animation: fadeInButton 0.5s ease-out forwards 1.5s;
+        }
+
+        @keyframes fadeInButton {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .enter-btn:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .enter-btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo1.png" alt="Jo Smith Photography Logo" class="nav-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="prices.html">Prices & Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="testimonials.html">Testimonials</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="hero-content" style="background-image: url('https://images.unsplash.com/photo-1729257973345-91a99bd19e9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                        <div class="container">
-                            <h1 class="display-4">Scotland's Natural Beauty Through My Lens</h1>
-                            <p class="lead">Capturing the breathtaking landscapes and hidden gems of Scotland's wilderness</p>
-                            <a href="gallery.html" class="btn btn-light btn-lg mt-3">Explore My Work</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-content" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                        <div class="container">
-                            <h1 class="display-4">Nature's Timeless Moments</h1>
-                            <p class="lead">Eight years of expertise in landscape and wildlife photography</p>
-                            <a href="contact.html" class="btn btn-light btn-lg mt-3">Book a Session</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="hero-content" style="background-image: url('https://images.unsplash.com/photo-1562589726-bb3f466144da?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-                        <div class="container">
-                            <h1 class="display-4">Capturing Joy in Every Moment</h1>
-                            <p class="lead">Creating lasting memories of laughter, love, and life's beautiful connections</p>
-                            <a href="prices.html" class="btn btn-light btn-lg mt-3">Start Your Story</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- Featured Work -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title">Featured Work</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Photo" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                        <div class="image-credit"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Photo" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                        <div class="image-credit"></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Photo" data-bs-toggle="modal" data-bs-target="#galleryModal">
-                        <div class="image-credit"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
-            </div>
-        </div>
-    </section>
-   <!-- Photographer Info -->
-<section class="photographer-section">
-    <div class="container">
-        <div class="photographer-info">
-            <div class="photographer-content">
-                <div class="photographer-image">
-                    <img src="https://images.unsplash.com/photo-1495580621852-5de0cc907d2f?q=80&w=2039&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jo Smith">
-                    <div class="image-border"></div>
-                </div>
-                <div class="photographer-text">
-                    <h3>Jo Smith</h3>
-                    <p>Professional Photographer</p>
-                    <p class="bio">
-                        Jo Smith Photography is a leading nature photographer with over eight years' experience working within landscape and natural world photography, specialising in the landscapes of Scotland. Jo's style has developed organically through photographing the wide variety of landscapes and seascapes found around Scotland. Her bold, colourful landscape photographs are always in-demand.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="content">
+        <h1>Jo Smith Photography</h1>
+        <a href="main.html" class="enter-btn">Enter</a>
     </div>
-</section>
-
-
-
-    <!-- Quick Links -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <i class="fas fa-camera-retro fa-3x mb-3"></i>
-                    <h3>View Our Work</h3>
-                    <p>Explore our portfolio of stunning photography across different styles and occasions.</p>
-                    <a href="gallery.html" class="btn btn-outline-primary">Browse Gallery</a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <i class="fas fa-tags fa-3x mb-3"></i>
-                    <h3>Pricing</h3>
-                    <p>Discover our photography packages and find the perfect option for your needs.</p>
-                    <a href="prices.html" class="btn btn-outline-primary">View Packages</a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <i class="fas fa-envelope fa-3x mb-3"></i>
-                    <h3>Get in Touch</h3>
-                    <p>Ready to capture your special moments? Contact us to discuss your photography needs.</p>
-                    <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <div class="social-icons mb-3">
-                <a href="https://www.instagram.com/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-instagram"></use></svg>
-                </a>
-                <a href="https://x.com/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-twitter"></use></svg>
-                </a>
-                <a href="https://facebook.com/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-facebook"></use></svg>
-                </a>
-                <a href="https://pinterest.com/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-pinterest"></use></svg>
-                </a>
-                <a href="https://youtube.com/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-youtube"></use></svg>
-                </a>
-                <a href="https://linkedin.com/in/josmithphoto" class="social-icon">
-                    <svg class="icon"><use href="images/social-icons.svg#icon-linkedin"></use></svg>
-                </a>
-            </div>
-            <p>&copy; 2024 Jo Smith Photography. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Subscription Modal -->
-    <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Join Our Newsletter</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Subscribe to receive updates on special offers, new collections, and photography tips!</p>
-                    <form id="subscriptionForm">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="subscriberName" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="subscriberEmail" placeholder="Your Email" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/modal.js"></script>
 </body>
-</html>
+</html> 
