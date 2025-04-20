@@ -139,18 +139,18 @@
     margin-bottom: 1.5rem;
 }
 
-.list-unstyled {
+.package-card .list-unstyled {
     flex-grow: 1;
     margin-bottom: 1.5rem;
 }
 
-.list-unstyled li {
+.package-card .list-unstyled li {
     padding: 0.5rem 0;
     color: #666;
     border-bottom: 1px solid #eee;
 }
 
-.list-unstyled li:last-child {
+.package-card .list-unstyled li:last-child {
     border-bottom: none;
 }
 

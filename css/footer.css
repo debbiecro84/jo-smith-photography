@@ -3,6 +3,23 @@ footer {
     border-top: 4px solid var(--accent-color)  !important;
 }
 
+/* Remove underlines from Quick Links */
+footer .list-unstyled li a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+footer .list-unstyled li a:hover,
+footer .list-unstyled li a:focus,
+footer .list-unstyled li a:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
